@@ -1,0 +1,15 @@
+{
+    "name": "pedram/multi-update",
+    "autoload": {
+        "psr-4": {
+            "Pedram\\MultiUpdate\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pedram Davoodi",
+            "email": "pedramdavoodi1376@gmail.com"
+        }
+    ],
+    "require": {}
+}
