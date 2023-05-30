@@ -1,42 +1,50 @@
-# Multi-Update Package
+# Multi-Update
 
-The `pedram-davoodi/multi-update` package provides a convenient way to perform multi-row updates on a database table using Laravel's Eloquent ORM.
+Multi-Update is a PHP package that allows you to update multiple rows in a database table with a single SQL statement. This package is useful when you need to update multiple rows with the same value or based on a common condition.
 
 ## Installation
 
-You can install this package using Composer. Run the following command in your terminal:
+You can install Multi-Update using Composer. 
 
-```
+```bash
 composer require pedram/multi-update
 ```
 
 ## Usage
 
-To use the `updateMultipleRows()` method provided by this package, you must first import the `PedramDavoodi\MultiUpdate\MultiUpdateable` trait in your model class. This trait provides the `updateMultipleRows()` method, which you can use to perform multi-row updates on the model's table.
-
-Here's an example of how to call the `updateMultipleRows()` method:
+To use Multi-Update, you need to call the `updateMultipleRows` method on a model or a query builder instance. This method takes two parameters: an array of fields and their corresponding values to update, and a variable-length argument list of conditions to apply to the update statement.
 
 ```php
-$params = [
-    'column1' => [
-        'value1' => 'condition1',
-        'value2' => 'condition2'
-    ],
-    'column2' => [
-        'value3' => 'condition3',
-        'value4' => 'condition4'
-    ]
-];
+use PedramD\MultiUpdate\MultiUpdate;
 
-$numRowsUpdated = MyModel::updateMultipleRows($params);
+MyModel::updateMultipleRows($params, $condition1, $condition2, ...);
 ```
 
-In this example, we've defined the `$params` array to update two columns (`column1` and `column2`) with multiple values based on different conditions. We've then created a new instance of `MyModel` and called the `updateMultipleRows()` method with the `$params` array. The method returns the number of rows affected by the update query.
+Here's an example of how you can use Multi-Update to update multiple rows in a database table:
+
+```php
+use PedramD\MultiUpdate\MultiUpdate;
+
+MyModel::updateMultipleRows([
+    'column1' => [
+        'value1' => 'condition1',
+        'value2' => 'condition2',
+        'value3' => 'condition3',
+    ],
+    'column2' => [
+        'new_value' => 'condition4',
+    ],
+], 'column5 > 0', 'column6 = "some_value"');
+```
+
+In the above example, we are updating two columns `column1` and `column2`. The `column1` is updated based on three different conditions, and the `column2` is updated based on one condition. We have also added two additional conditions to apply to the update statement.
 
 ## Contributing
 
-If you find a bug or have a feature request, please open an issue on GitHub. Pull requests are welcome!
+Contributions to Multi-Update are welcome and encouraged! If you find a bug or have a feature request, please open an issue on the GitHub repository. If you would like to contribute code, please fork the repository and submit a pull request.
+
+When submitting a pull request, please make sure to follow the PSR-2 coding standards and include tests for any new functionality or bug fixes.
 
 ## License
 
-This package is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Multi-Update is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
