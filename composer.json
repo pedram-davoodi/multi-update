@@ -2,7 +2,7 @@
     "name": "pedram/multi-update",
     "autoload": {
         "psr-4": {
-            "Pedram\\MultiUpdate\\": "src/"
+            "PedramDavoodi\\MultiUpdate\\": "src/"
         }
     },
     "authors": [

@@ -1,6 +1,6 @@
 <?php
 
-namespace pedram\multiUpdate\Traits;
+namespace PedramDavoodi\MultiUpdate\Traits;
 
 use Illuminate\Support\Facades\DB;
 
