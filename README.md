@@ -1,6 +1,6 @@
 # Multi-Update
 
-Multi-Update is a PHP package that allows you to update multiple rows in a database table with a single SQL statement. This package is useful when you need to update multiple rows with the same value or based on a common condition.
+Multi-Update is a laravel package that allows you to update multiple rows in a database table with a single SQL statement. This package is useful when you need to update multiple rows with the different value based on given conditions.
 
 ## Installation
 
