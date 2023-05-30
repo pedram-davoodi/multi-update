@@ -15,7 +15,7 @@ Trait MultiUpdateable{
      * @param string ...$conditions A variable-length argument list of conditions to apply to the update statement Each condition should be a string in the format of a valid SQL WHERE clause.
      * @return int|bool The number of rows affected by the update query, or false if an error occurred.
      */
-    public static function updateMultipleRows($params , string ...$conditions)
+    public static function updateMultipleRows(array $params , string ...$conditions)
     {
         try {
             $table = (new static)->getTable();
