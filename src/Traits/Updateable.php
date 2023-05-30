@@ -4,7 +4,7 @@ namespace PedramDavoodi\MultiUpdate\Traits;
 
 use Illuminate\Support\Facades\DB;
 
-Trait Updateable{
+Trait MultiUpdateable{
 
     /**
      * Perform a multi-row update on the model's table based on the given parameters.
@@ -14,7 +14,7 @@ Trait Updateable{
      *                      and the values are the conditions to match for each new value.
      * @return int|bool The number of rows affected by the update query, or false if an error occurred.
      */
-    public static function multiUpdate($params)
+    public static function updateMultipleRows($params)
     {
         try {
             $table = (new static)->getTable();
