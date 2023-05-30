@@ -43,7 +43,7 @@ In the above example, we are updating two columns `column1` and `column2`. The `
 
 Contributions to Multi-Update are welcome and encouraged! If you find a bug or have a feature request, please open an issue on the GitHub repository. If you would like to contribute code, please fork the repository and submit a pull request.
 
-When submitting a pull request, please make sure to follow the PSR-2 coding standards and include tests for any new functionality or bug fixes.
+When submitting a pull request, please make sure to follow the PSR-2 coding standards for any new functionality or bug fixes.
 
 ## License
 
