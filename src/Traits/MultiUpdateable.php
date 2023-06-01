@@ -22,7 +22,7 @@ Trait MultiUpdateable{
             $query = "UPDATE $table SET";
             foreach ($params as $field => $param) {
                 $query .= " $field = CASE";
-                foreach ($param as $value => $condition) {
+                foreach ($param as $condition => $value) {
                     $query .= " WHEN $condition THEN '$value' ";
                 }
                 $query .= " ELSE $field END,";

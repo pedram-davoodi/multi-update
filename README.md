@@ -27,12 +27,12 @@ use PedramD\MultiUpdate\MultiUpdate;
 
 MyModel::updateMultipleRows([
     'column1' => [
-        'value1' => 'condition1',
-        'value2' => 'condition2',
-        'value3' => 'condition3',
+        'condition1' => 'value1',
+        'condition2' => 'value2',
+        'condition3' => 'value3',
     ],
     'column2' => [
-        'new_value' => 'condition4',
+        'condition4' => 'new_value',
     ],
 ], 'column5 > 0', 'column6 = "some_value"');
 ```
